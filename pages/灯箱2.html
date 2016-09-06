@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+    8{
+        margin:0;
+        padding: 0;
+    }
+    .box{
+        width: 400px;
+        height: 80px;
+        border:1px solid #000;
+        position:relative;
+        margin:20px auto;
+        overflow:hidden;
+    }
+    @keyframes demo{
+        from{top:0;}
+        to{top:-170px;}
+    }
+    .content{
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 400px;
+        height: 300px;
+        background:-webkit-repeating-linear-gradient(-45deg,green 0,green 20px,black 20px,black 40px,yellow 40px,yellow 60px);
+        -webkit-animation:demo 1s linear infinite;
+       
+        
+    }
+   
+
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="content"></div>
+    </div>
+</body>
+</html>

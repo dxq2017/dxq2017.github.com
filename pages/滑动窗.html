@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+    .box{
+        width: 300px;
+        height: 150px;
+        margin:100px auto;
+        border:1px solid #000;
+        border-radius:20px;
+        overflow:hidden;
+        box-shadow:-5px -5px 10px #000;
+        position:relative;
+    }
+    img{
+       width: 300px;
+        height: 150px;
+    }
+    .mask{
+        width: 300px;
+        height: 150px;
+        font-size:100px;
+        text-align:center;
+        line-height:150px;
+        color:#fff;
+        text-shadow:5px 5px 10px red;
+        position:absolute;
+        left: 0;
+        top:0;
+        background:#ccc;
+        /*transition:1s all ease;*/
+
+    }
+ 
+    @keyframes demo{
+        from{top:0;}
+        to{top:-270px;}
+    }
+</style>
+<script>
+    window.onload=function(){
+        var oBox=document.querySelector('.box');
+        var oMask=document.querySelector('.mask');
+        oBox.onmouseover=function(){
+            oMask.style.transition='1s all ease';
+            oMask.style.top='-130px';    
+        };
+        oBox.onmouseout=function(){
+            oMask.style.top='0';    
+        };
+    };
+</script>
+</head>
+<body>
+    <div class="box">
+        <div class="mask">美女</div>
+        <img src="4.jpg"/>
+    </div>
+</body>
+</html>

@@ -34,27 +34,16 @@
         left: 0;
         top:0;
         background:#ccc;
-        /*transition:1s all ease;*/
-
+        -webkit-transition:1s all ease;
+    }
+    .mask:hover{
+        top:-150px;
     }
  
-    @keyframes demo{
-        from{top:0;}
-        to{top:-270px;}
-    }
+ 
 </style>
 <script>
-    window.onload=function(){
-        var oBox=document.querySelector('.box');
-        var oMask=document.querySelector('.mask');
-        oBox.onmouseover=function(){
-            oMask.style.transition='1s all ease';
-            oMask.style.top='-130px';    
-        };
-        oBox.onmouseout=function(){
-            oMask.style.top='0';    
-        };
-    };
+   
 </script>
 </head>
 <body>

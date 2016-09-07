@@ -8,7 +8,7 @@
 <meta name="keywords" content="">
 <link href="" rel="stylesheet">
 <style>
-    8{
+    *{
         margin:0;
         padding: 0;
     }
@@ -30,16 +30,26 @@
         top: 0;
         width: 400px;
         height: 300px;
-        background:-webkit-repeating-linear-gradient(-45deg,green 0,green 20px,black 20px,black 40px,yellow 40px,yellow 60px);
+        background:-webkit-repeating-linear-gradient(-45deg,black 0,black 20px,#fff 20px,#fff 40px,blue 40px,blue 60px);
         -webkit-animation:demo 1s linear infinite;
-       
-        
     }
    
 
 </style>
+<script>
+    window.onload=function(){
+        var oC1=document.querySelectorAll('input')[0];
+        var oC2=document.querySelectorAll('input')[1];
+        var oC=document.querySelector('.content');
+        oC2.onchange=oC1.onchange=function(){
+            oC.style.background='-webkit-repeating-linear-gradient(-45deg,'+oC1.value+' 0,'+oC1.value+' 20px,#fff 20px,#fff 40px,'+oC2.value+' 40px,'+oC2.value+' 60px)';
+        };
+    };
+</script>
 </head>
 <body>
+    <input type="color" value="#000000"/>
+    <input type="color" value="#0000ff">
     <div class="box">
         <div class="content"></div>
     </div>
